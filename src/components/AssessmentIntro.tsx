@@ -7,6 +7,11 @@ import { Target, Users, TrendingUp, CheckCircle, ArrowRight, Lightbulb, Heart, C
 
 interface AssessmentIntroProps {
   onNext: () => void;
+  onPrev?: () => void;
+  onUpdateData?: (section: string, data: any) => void;
+  assessmentData?: any;
+  currentStep?: number;
+  totalSteps?: number;
 }
 
 const AssessmentIntro: React.FC<AssessmentIntroProps> = ({ onNext }) => {
